@@ -216,53 +216,6 @@ const initMetricCounters = () => {
 
 initMetricCounters();
 
-const initRoadmapCarousel = () => {
-  const roadmapEl = document.querySelector('.roadmap-swiper');
-  if (!roadmapEl) {
-    return;
-  }
-
-  if (!(window.Swiper)) {
-    roadmapEl.classList.add('roadmap-swiper--fallback');
-    return;
-  }
-
-  new Swiper(roadmapEl, {
-    slidesPerView: 1.05,
-    spaceBetween: 20,
-    grabCursor: true,
-    loop: false,
-    navigation: {
-      nextEl: '.roadmap-next',
-      prevEl: '.roadmap-prev'
-    },
-    pagination: {
-      el: '.roadmap-pagination',
-      clickable: true
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 1.4,
-        spaceBetween: 24
-      },
-      900: {
-        slidesPerView: 2.1,
-        spaceBetween: 26
-      },
-      1200: {
-        slidesPerView: 2.6,
-        spaceBetween: 28
-      },
-      1440: {
-        slidesPerView: 3.1,
-        spaceBetween: 32
-      }
-    }
-  });
-};
-
-initRoadmapCarousel();
-
 const initFaqAccordion = () => {
   const faqButtons = Array.from(document.querySelectorAll('.faq-question'));
   if (!faqButtons.length) {
