@@ -2,6 +2,11 @@
 
 // Smooth scroll for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        heroSection.style.transform = 'none';
+    }
+
     // Mobile navigation toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -114,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.solution-card, .metric, .stack-item');
+    const animateElements = document.querySelectorAll('.function-card, .about-feature, .stack-item');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -123,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Counter animation for statistics
-    const counters = document.querySelectorAll('.stat-number, .metric-value');
+    const counters = document.querySelectorAll('.stat-number');
     const countObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
@@ -218,27 +223,7 @@ function animateCounter(element) {
 }
 
 // Performance optimization: Throttle scroll events
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-// Add subtle parallax effect to hero background
-window.addEventListener('scroll', throttle(function() {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-}, 16));
+// (Former parallax helper removed because hero should stay fixed on scroll)
 
 // Add keyboard navigation support
 document.addEventListener('keydown', function(e) {
