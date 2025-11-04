@@ -1,290 +1,1150 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBSoft | Kurumsal Yapay Zeka Çözümleri</title>
-    <meta name="description" content="Akıllı şehirler ve kurumlar için premium yapay zeka çözümleri. İşletmenizi en son teknoloji ile dönüştürün.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>GBSoft Smart Operations | AI-Powered Municipal Command Center</title>
+    <meta name="description" content="Municipal-grade operations cockpit unifying AI shift planning, real-time fleet visibility, and Sentinel-2 environmental analytics. Smart city management for Turkish municipalities.">
+    <meta name="keywords" content="akıllı temizlik yönetim platformu, belediye operasyon yazılımı, AI shift planning for municipalities, Sentinel-2 city analytics, smart city fleet management Turkey">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
             <div class="nav-brand">
                 <img src="logo.jpg" alt="GBSoft" class="logo">
-                <span class="brand-text">GBSoft</span>
+                <span class="brand-text">GBSoft Smart Operations</span>
             </div>
-            
             <div class="nav-links">
-                <a href="#functions" class="nav-link">Çözümler</a>
-                <a href="#technology" class="nav-link">Teknoloji</a>
-                <a href="#about" class="nav-link">Hakkımızda</a>
-                <a href="#contact" class="nav-link">İletişim</a>
+                <a href="#features">
+                    <span class="tr-text">Platform</span>
+                    <span class="en-text hidden">Platform</span>
+                </a>
+                <a href="#architecture">
+                    <span class="tr-text">Teknoloji</span>
+                    <span class="en-text hidden">Technology</span>
+                </a>
+                <a href="#pricing">
+                    <span class="tr-text">Çözümler</span>
+                    <span class="en-text hidden">Solutions</span>
+                </a>
+                <button class="language-toggle" id="langToggle">EN</button>
+                <button class="cta-nav">
+                    <span class="tr-text">Demo Talep Et</span>
+                    <span class="en-text hidden">Request Demo</span>
+                </button>
             </div>
-            
-            <button class="nav-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-main">
-                <span class="hero-kicker">Kurumsal Yapay Zeka Platformu</span>
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
                 <h1 class="hero-title">
-                    Akıllı şehir operasyonlarını<br>
-                    <span class="hero-accent">tek panelde yönetin</span>
+                    <span class="tr-text">Şehrinizin temizliğini AI hassasiyetiyle yönetin</span>
+                    <span class="en-text hidden">Orchestrate your city's cleanliness with AI precision</span>
                 </h1>
-                <p class="hero-description">
-                    GBSoft, belediyeler ve kurumlar için planlama, izleme ve analiz süreçlerini birleştirir. Tüm ekiplerinizi gerçek zamanlı verilerle koordine edin ve operasyonel verimliliği artırın.
+                <p class="hero-subtitle">
+                    <span class="tr-text">GBSoft Akıllı Operasyonlar, AI vardiya planlama, gerçek zamanlı filo görünürlüğü ve Sentinel-2 destekli çevresel analitiği tek bir güvenli kontrol merkezinde birleştiren belediye sınıfı operasyon kokpitidir.</span>
+                    <span class="en-text hidden">GBSoft Smart Operations is a municipal-grade operations cockpit that unifies AI shift planning, real-time fleet visibility, and Sentinel-2 powered environmental analytics in a single, secure control hub.</span>
                 </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Demo İsteyin</a>
-                    <a href="#functions" class="btn-link">Ürünü İnceleyin</a>
-                </div>
-                <div class="hero-tags">
-                    <span class="tag">Yapay Zeka Destekli Planlama</span>
-                    <span class="tag">Anlık Operasyon Takibi</span>
-                    <span class="tag">Veri Odaklı Kararlar</span>
+                <div class="hero-ctas">
+                    <button class="cta-primary">
+                        <span class="tr-text">Komuta Merkezi Turunu Planlayın</span>
+                        <span class="en-text hidden">Schedule Command Center Tour</span>
+                    </button>
+                    <button class="cta-secondary">
+                        <span class="tr-text">Belediye Özetini İndirin</span>
+                        <span class="en-text hidden">Download Municipality Brief</span>
+                    </button>
                 </div>
             </div>
-            <div class="hero-aside">
-                <div class="hero-card">
-                    <div class="hero-card-header">
-                        <span class="hero-status">Operasyon Kontrolü</span>
-                        <span class="hero-status-dot"></span>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="proof-headline">
+                <span class="en-text">Trusted by forward-thinking municipalities and certified by leading institutions</span>
+                <span class="tr-text hidden">İlerici belediyeler tarafından güvenilen ve lider kurumlar tarafından sertifikalandırılan</span>
+            </p>
+            <div class="proof-logos">
+                <div class="proof-item">
+                    <div class="proof-placeholder">TÜBİTAK Smart City Program</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-placeholder">EU Horizon 2020</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-placeholder">ISO 27001 Certified</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-placeholder">Pilot Municipality Partner</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-placeholder">GDPR Compliant</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain to Solution -->
+    <section class="pain-solution" id="pain-solution">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en-text">From Municipal Chaos to AI-Orchestrated Operations</span>
+                <span class="tr-text hidden">Belediye Kaosundan AI-Orkestralı Operasyonlara</span>
+            </h2>
+            <div class="transformation-grid">
+                <div class="transformation-item">
+                    <div class="before">
+                        <i class="fas fa-file-excel"></i>
+                        <h3>
+                            <span class="en-text">Manual Shift Spreadsheets</span>
+                            <span class="tr-text hidden">Manuel Vardiya Çizelgeleri</span>
+                        </h3>
+                        <p>
+                            <span class="en-text">Hours spent juggling Excel sheets, compliance violations, overtime miscalculations</span>
+                            <span class="tr-text hidden">Excel sayfalarıyla saatler harcama, uyumluluk ihlalleri, fazla mesai yanlış hesaplamaları</span>
+                        </p>
                     </div>
-                    <ul class="hero-card-list">
+                    <div class="arrow">→</div>
+                    <div class="after">
+                        <i class="fas fa-brain"></i>
+                        <h3>
+                            <span class="en-text">AI-Balanced Rosters</span>
+                            <span class="tr-text hidden">AI-Dengeli Vardiya Listeleri</span>
+                        </h3>
+                        <p>
+                            <span class="en-text">Optimize staff availability in seconds with compliance-first AI planning</span>
+                            <span class="tr-text hidden">Uyumluluk öncelikli AI planlama ile personel müsaitliğini saniyeler içinde optimize edin</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="transformation-item">
+                    <div class="before">
+                        <i class="fas fa-walkie-talkie"></i>
+                        <h3>
+                            <span class="en-text">Fragmented Radio Calls</span>
+                            <span class="tr-text hidden">Parçalanmış Telsiz Görüşmeleri</span>
+                        </h3>
+                        <p>
+                            <span class="en-text">Lost communications, delayed responses, no audit trail</span>
+                            <span class="tr-text hidden">Kayıp iletişim, gecikmeli tepkiler, denetim izi yok</span>
+                        </p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="after">
+                        <i class="fas fa-microphone"></i>
+                        <h3>
+                            <span class="en-text">Turkish Voice Command Center</span>
+                            <span class="tr-text hidden">Türkçe Sesli Komuta Merkezi</span>
+                        </h3>
+                        <p>
+                            <span class="en-text">Real-time voice coordination with full command history and push-to-field instructions</span>
+                            <span class="tr-text hidden">Tam komut geçmişi ve sahaya anlık talimatlarla gerçek zamanlı sesli koordinasyon</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="transformation-item">
+                    <div class="before">
+                        <i class="fas fa-eye-slash"></i>
+                        <h3>
+                            <span class="en-text">Blind Spot Monitoring</span>
+                            <span class="tr-text hidden">Kör Nokta İzleme</span>
+                        </h3>
+                        <p>
+                            <span class="en-text">Reactive maintenance, environmental surprises, incomplete coverage reports</span>
+                            <span class="tr-text hidden">Reaktif bakım, çevresel sürprizler, eksik kapsama raporları</span>
+                        </p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="after">
+                        <i class="fas fa-satellite"></i>
+                        <h3>
+                            <span class="en-text">Sentinel-2 Analytics Lab</span>
+                            <span class="tr-text hidden">Sentinel-2 Analitik Laboratuvarı</span>
+                        </h3>
+                        <p>
+                            <span class="en-text">NDVI/NDWI/NDBI coverage across Turkish geography for predictive environmental insights</span>
+                            <span class="tr-text hidden">Öngörülü çevresel içgörüler için Türkiye coğrafyasında NDVI/NDWI/NDBI kapsamı</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Pillars -->
+    <section class="platform-pillars" id="features">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en-text">Four Pillars of Municipal Excellence</span>
+                <span class="tr-text hidden">Belediye Mükemmelliğinin Dört Sütunu</span>
+            </h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="en-text">AI Shift Intelligence</span>
+                        <span class="tr-text hidden">AI Vardiya Zekası</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Auto-balanced rosters that account for labor compliance, skill matching, and predictive workload distribution.</span>
+                        <span class="tr-text hidden">İş gücü uyumluluğu, yetenek eşleştirme ve öngörülü iş yükü dağılımını dikkate alan otomatik dengeli vardiya listeleri.</span>
+                    </p>
+                    <ul>
                         <li>
-                            <span class="list-label">Vardiya Planı</span>
-                            <span class="list-value positive">Optimize edildi</span>
+                            <span class="en-text">Compliance-first scheduling</span>
+                            <span class="tr-text hidden">Uyumluluk öncelikli planlama</span>
                         </li>
                         <li>
-                            <span class="list-label">Filo Takibi</span>
-                            <span class="list-value">12 araç canlı</span>
+                            <span class="en-text">Skill-based assignments</span>
+                            <span class="tr-text hidden">Yetenek bazlı atamalar</span>
                         </li>
                         <li>
-                            <span class="list-label">Uyarılar</span>
-                            <span class="list-value warning">2 kritik görev</span>
-                        </li>
-                        <li>
-                            <span class="list-label">Saha Ekibi</span>
-                            <span class="list-value">48 personel aktif</span>
+                            <span class="en-text">Overtime optimization</span>
+                            <span class="tr-text hidden">Fazla mesai optimizasyonu</span>
                         </li>
                     </ul>
-                    <div class="hero-card-footer">
-                        <div class="card-avatars">
-                            <span class="avatar"></span>
-                            <span class="avatar"></span>
-                            <span class="avatar"></span>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>
+                        <span class="en-text">Fleet Command & Telemetry</span>
+                        <span class="tr-text hidden">Filo Komutası ve Telemetri</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">WebSocket-powered live tracking with Google Maps routing, predictive maintenance alerts, and fuel optimization.</span>
+                        <span class="tr-text hidden">Google Haritalar yönlendirme, öngörülü bakım uyarıları ve yakıt optimizasyonu ile WebSocket destekli canlı takip.</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="en-text">Real-time GPS tracking</span>
+                            <span class="tr-text hidden">Gerçek zamanlı GPS takibi</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Predictive maintenance</span>
+                            <span class="tr-text hidden">Öngörülü bakım</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Route optimization</span>
+                            <span class="tr-text hidden">Rota optimizasyonu</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>
+                        <span class="en-text">Satellite Insights Lab</span>
+                        <span class="tr-text hidden">Uydu İçgörü Laboratuvarı</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Sentinel-2 powered environmental analytics covering Turkish geography with NDVI, NDWI, NDBI, and LST monitoring.</span>
+                        <span class="tr-text hidden">NDVI, NDWI, NDBI ve LST izleme ile Türkiye coğrafyasını kapsayan Sentinel-2 destekli çevresel analitik.</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="en-text">Environmental compliance</span>
+                            <span class="tr-text hidden">Çevresel uyumluluk</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Vegetation monitoring</span>
+                            <span class="tr-text hidden">Bitki örtüsü izleme</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Urban heat mapping</span>
+                            <span class="tr-text hidden">Kentsel ısı haritalama</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>
+                        <span class="en-text">Cross-team Collaboration</span>
+                        <span class="tr-text hidden">Takımlar Arası İşbirliği</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Role-based access with Turkish voice commands, automated reporting, and mayor-ready dashboards.</span>
+                        <span class="tr-text hidden">Türkçe sesli komutlar, otomatik raporlama ve başkan için hazır panolarla rol bazlı erişim.</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="en-text">Role-based permissions</span>
+                            <span class="tr-text hidden">Rol bazlı izinler</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Turkish voice assistant</span>
+                            <span class="tr-text hidden">Türkçe sesli asistan</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Executive dashboards</span>
+                            <span class="tr-text hidden">Yönetici panoları</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Feature Rows -->
+    <section class="deep-features">
+        <div class="container">
+            <!-- AI Shift Planner -->
+            <div class="feature-row">
+                <div class="feature-content">
+                    <div class="feature-badge">
+                        <span class="en-text">AI Vardiya Planlama</span>
+                        <span class="tr-text hidden">AI Shift Planning</span>
+                    </div>
+                    <h3>
+                        <span class="en-text">Optimize staff availability in seconds</span>
+                        <span class="tr-text hidden">Personel müsaitliğini saniyeler içinde optimize edin</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Our AI Shift Planner eliminates the manual burden of roster creation while ensuring full compliance with Turkish labor laws. The system automatically balances workloads, accounts for skill requirements, and optimizes for cost efficiency.</span>
+                        <span class="tr-text hidden">AI Vardiya Planlayıcımız, Türk iş hukuku ile tam uyumluluğu sağlarken vardiya oluşturmanın manuel yükünü ortadan kaldırır. Sistem otomatik olarak iş yüklerini dengeler, yetenek gereksinimlerini hesaba katar ve maliyet verimliliği için optimize eder.</span>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Auto-balanced rosters with compliance checking</span>
+                            <span class="tr-text hidden">Uyumluluk kontrolü ile otomatik dengeli vardiya listeleri</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Skill-based job matching and certification tracking</span>
+                            <span class="tr-text hidden">Yetenek bazlı iş eşleştirme ve sertifika takibi</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Predictive overtime alerts and budget forecasting</span>
+                            <span class="tr-text hidden">Öngörülü fazla mesai uyarıları ve bütçe tahmini</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">One-click schedule exports and manager notifications</span>
+                            <span class="tr-text hidden">Tek tıkla program dışa aktarımı ve yönetici bildirimleri</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-container">
+                        <img src="AISHIFT.png" alt="AI Shift Planning Dashboard" class="feature-image" loading="lazy">
+                        <div class="image-caption">
+                            <span class="en-text">AI Shift Planning Dashboard - Calendar View with Color-coded Compliance Status</span>
+                            <span class="tr-text hidden">AI Vardiya Planlama Paneli - Renk kodlu uyumluluk durumu ile takvim görünümü</span>
                         </div>
-                        <span class="card-caption">Gerçek zamanlı pano güncelleniyor</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleet Tracking -->
+            <div class="feature-row reverse">
+                <div class="feature-visual">
+                    <div class="feature-image-container">
+                        <img src="filokomutamerkezi2.png" alt="Real-time Fleet Map" class="feature-image" loading="lazy">
+                        <div class="image-caption">
+                            <span class="en-text">Real-time Fleet Map with Live Vehicle Positions and Route Optimization</span>
+                            <span class="tr-text hidden">Canlı araç konumları ve rota optimizasyonu ile gerçek zamanlı filo haritası</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <div class="feature-badge">
+                        <span class="en-text">Gerçek zamanlı araç takibi ve bakım yönetimi</span>
+                        <span class="tr-text hidden">Real-time Fleet Tracking</span>
+                    </div>
+                    <h3>
+                        <span class="en-text">WebSocket live updates with predictive maintenance</span>
+                        <span class="tr-text hidden">Öngörülü bakım ile WebSocket canlı güncellemeleri</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Track every vehicle in real-time with Google Maps integration, receive predictive maintenance alerts before breakdowns occur, and optimize routes automatically based on traffic, weather, and workload priorities.</span>
+                        <span class="tr-text hidden">Google Haritalar entegrasyonu ile her aracı gerçek zamanlı takip edin, arızalar oluşmadan önce öngörülü bakım uyarıları alın ve trafik, hava durumu ve iş yükü önceliklerine göre rotaları otomatik optimize edin.</span>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">WebSocket-powered live GPS tracking with 5-second updates</span>
+                            <span class="tr-text hidden">5 saniye güncellemeli WebSocket destekli canlı GPS takibi</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Google Maps routing with Turkish traffic integration</span>
+                            <span class="tr-text hidden">Türkiye trafik entegrasyonu ile Google Haritalar yönlendirme</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Predictive maintenance alerts and service scheduling</span>
+                            <span class="tr-text hidden">Öngörülü bakım uyarıları ve servis planlaması</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Fuel consumption monitoring and cost optimization</span>
+                            <span class="tr-text hidden">Yakıt tüketimi izleme ve maliyet optimizasyonu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sentinel-2 Analytics -->
+            <div class="feature-row">
+                <div class="feature-content">
+                    <div class="feature-badge">
+                        <span class="en-text">Sentinel-2 destekli çevresel analiz</span>
+                        <span class="tr-text hidden">Sentinel-2 Environmental Analytics</span>
+                    </div>
+                    <h3>
+                        <span class="en-text">NDVI/NDWI/NDBI coverage across Turkish geography</span>
+                        <span class="tr-text hidden">Türkiye coğrafyasında NDVI/NDWI/NDBI kapsamı</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Leverage European Space Agency's Sentinel-2 satellite data to monitor vegetation health (NDVI), water quality (NDWI), urban development (NDBI), and land surface temperature (LST) across Turkey. From Erzurum to İstanbul, get environmental insights that drive smarter waste management decisions.</span>
+                        <span class="tr-text hidden">Türkiye genelinde bitki örtüsü sağlığı (NDVI), su kalitesi (NDWI), kentsel gelişim (NDBI) ve arazi yüzey sıcaklığını (LST) izlemek için Avrupa Uzay Ajansı'nın Sentinel-2 uydu verilerinden yararlanın. Erzurum'dan İstanbul'a, daha akıllı atık yönetimi kararları veren çevresel içgörüler elde edin.</span>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Full Turkish territory coverage (Erzurum, Oltu, İstanbul, Ankara)</span>
+                            <span class="tr-text hidden">Tam Türkiye toprak kapsamı (Erzurum, Oltu, İstanbul, Ankara)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">NDVI vegetation monitoring for green space management</span>
+                            <span class="tr-text hidden">Yeşil alan yönetimi için NDVI bitki örtüsü izleme</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">NDWI water quality assessment and flood risk prediction</span>
+                            <span class="tr-text hidden">NDWI su kalitesi değerlendirmesi ve sel riski tahmini</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">LST urban heat island detection and mitigation planning</span>
+                            <span class="tr-text hidden">LST kentsel ısı adası tespiti ve azaltma planlaması</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-container">
+                        <img src="MAHALLETEMIZLIKSKORLARIDASHBOARD.png" alt="Environmental Analytics Dashboard" class="feature-image" loading="lazy">
+                        <div class="image-caption">
+                            <span class="en-text">Environmental Analytics Dashboard with Cleanliness Scoring</span>
+                            <span class="tr-text hidden">Temizlik puanlama ile çevresel analitik paneli</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Command Center -->
+            <div class="feature-row reverse">
+                <div class="feature-visual">
+                    <div class="feature-image-container">
+                        <img src="VOICEMESAGES.png" alt="Turkish Voice Command Center" class="feature-image" loading="lazy">
+                        <div class="image-caption">
+                            <span class="en-text">Turkish Voice Command Interface with Real-time Actions</span>
+                            <span class="tr-text hidden">Gerçek zamanlı aksiyonlar ile Türkçe sesli komut arayüzü</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <div class="feature-badge">
+                        <span class="en-text">Türkçe sesli komut merkezi</span>
+                        <span class="tr-text hidden">Turkish Voice Command Center</span>
+                    </div>
+                    <h3>
+                        <span class="en-text">Natural Turkish voice commands with audit trail</span>
+                        <span class="tr-text hidden">Denetim izi ile doğal Türkçe sesli komutlar</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Issue commands, receive status updates, and coordinate field operations using natural Turkish voice interactions. Every command is logged with full audit trails for accountability and compliance reporting.</span>
+                        <span class="tr-text hidden">Doğal Türkçe sesli etkileşimler kullanarak komutlar verin, durum güncellemeleri alın ve saha operasyonlarını koordine edin. Her komut, hesap verebilirlik ve uyumluluk raporlaması için tam denetim izleri ile kaydedilir.</span>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Turkish natural language processing with dialect support</span>
+                            <span class="tr-text hidden">Lehçe desteği ile Türkçe doğal dil işleme</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Command history with full audit logging and playback</span>
+                            <span class="tr-text hidden">Tam denetim kayıtları ve oynatma ile komut geçmişi</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Push-to-field instructions with confirmation receipts</span>
+                            <span class="tr-text hidden">Onay makbuzları ile sahaya anlık talimatlar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Emergency escalation protocols and priority routing</span>
+                            <span class="tr-text hidden">Acil durum yükseltme protokolleri ve öncelik yönlendirmesi</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Analytics & Reporting -->
+            <div class="feature-row">
+                <div class="feature-content">
+                    <div class="feature-badge">
+                        <span class="en-text">Operations Analytics & Reporting</span>
+                        <span class="tr-text hidden">Operasyon Analitiği ve Raporlama</span>
+                    </div>
+                    <h3>
+                        <span class="en-text">Mayor-ready dashboards with automated briefings</span>
+                        <span class="tr-text hidden">Otomatik brifingler ile başkan için hazır panolar</span>
+                    </h3>
+                    <p>
+                        <span class="en-text">Generate comprehensive operational reports, export data in multiple formats, and receive automated email briefings. Executive dashboards provide at-a-glance insights for municipal leadership decision-making.</span>
+                        <span class="tr-text hidden">Kapsamlı operasyonel raporlar oluşturun, verileri birden fazla formatta dışa aktarın ve otomatik e-posta brifingleri alın. Yönetici panoları, belediye liderliği karar verme süreçleri için bir bakışta içgörüler sağlar.</span>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Real-time operational dashboards with KPI tracking</span>
+                            <span class="tr-text hidden">KPI takibi ile gerçek zamanlı operasyonel panolar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">CSV/PDF exports with custom report templates</span>
+                            <span class="tr-text hidden">Özel rapor şablonları ile CSV/PDF dışa aktarımları</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Automated daily/weekly email briefings for leadership</span>
+                            <span class="tr-text hidden">Liderlik için otomatik günlük/haftalık e-posta brifingleri</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="en-text">Budget impact analysis and cost center reporting</span>
+                            <span class="tr-text hidden">Bütçe etki analizi ve maliyet merkezi raporlaması</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-container">
+                        <img src="filokomutamerkezi1.png" alt="Executive Analytics Dashboard" class="feature-image" loading="lazy">
+                        <div class="image-caption">
+                            <span class="en-text">Fleet Command Center with Real-time Analytics and Metrics</span>
+                            <span class="tr-text hidden">Gerçek zamanlı analitik ve metrikler ile Filo Komuta Merkezi</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Functions Section -->
-    <section id="functions" class="core-functions">
-        <div class="functions-bg-logo" aria-hidden="true">
-            <div class="bg-logo"></div>
-        </div>
+
+    <!-- Security & Compliance -->
+    <section class="security">
         <div class="container">
-            <header class="functions-header">
-                <h2>Temel İşlevlerimiz</h2>
-                <p>GBSoft platformunun sunduğu yapay zeka destekli entegre yönetim çözümleri</p>
-            </header>
+            <h2 class="section-title">
+                <span class="en-text">Security & Compliance at the Core</span>
+                <span class="tr-text hidden">Çekirdekte Güvenlik ve Uyumluluk</span>
+            </h2>
+            <div class="security-grid">
+                <div class="security-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>
+                        <span class="en-text">Data Protection</span>
+                        <span class="tr-text hidden">Veri Koruması</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="en-text">JWT authentication with encrypted token storage</span>
+                            <span class="tr-text hidden">Şifrelenmiş token depolama ile JWT kimlik doğrulama</span>
+                        </li>
+                        <li>
+                            <span class="en-text">AES-256 encryption for all sensitive data</span>
+                            <span class="tr-text hidden">Tüm hassas veriler için AES-256 şifreleme</span>
+                        </li>
+                        <li>
+                            <span class="en-text">GDPR compliance with data residency in Turkey</span>
+                            <span class="tr-text hidden">Türkiye'de veri ikameti ile GDPR uyumluluğu</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>
+                        <span class="en-text">Access Control</span>
+                        <span class="tr-text hidden">Erişim Kontrolü</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="en-text">Multi-factor authentication (MFA) support</span>
+                            <span class="tr-text hidden">Çok faktörlü kimlik doğrulama (MFA) desteği</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Granular role-based permissions (RBAC)</span>
+                            <span class="tr-text hidden">Ayrıntılı rol bazlı izinler (RBAC)</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Session management with automatic timeout</span>
+                            <span class="tr-text hidden">Otomatik zaman aşımı ile oturum yönetimi</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>
+                        <span class="en-text">Monitoring & Uptime</span>
+                        <span class="tr-text hidden">İzleme ve Çalışma Süresi</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="en-text">Prometheus + Grafana ile gözlemlenebilirlik</span>
+                            <span class="tr-text hidden">Prometheus + Grafana observability stack</span>
+                        </li>
+                        <li>
+                            <span class="en-text">99.9% uptime SLA with 24/7 monitoring</span>
+                            <span class="tr-text hidden">7/24 izleme ile %99,9 çalışma süresi SLA'sı</span>
+                        </li>
+                        <li>
+                            <span class="en-text">7/24 teknik destek ve eğitim programı</span>
+                            <span class="tr-text hidden">24/7 technical support and training programs</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>
+                        <span class="en-text">Compliance & Certifications</span>
+                        <span class="tr-text hidden">Uyumluluk ve Sertifikalar</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <span class="en-text">ISO 27001 information security management</span>
+                            <span class="tr-text hidden">ISO 27001 bilgi güvenliği yönetimi</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Turkish KVKK (Personal Data Protection Law) compliance</span>
+                            <span class="tr-text hidden">Türk KVKK (Kişisel Verilerin Korunması Kanunu) uyumluluğu</span>
+                        </li>
+                        <li>
+                            <span class="en-text">Regular security audits and penetration testing</span>
+                            <span class="tr-text hidden">Düzenli güvenlik denetimleri ve penetrasyon testleri</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Timeline -->
+    <section class="implementation">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en-text">Your Path to AI-Powered Operations</span>
+                <span class="tr-text hidden">AI Destekli Operasyonlara Giden Yolunuz</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="en-text">Discovery & Planning</span>
+                            <span class="tr-text hidden">Keşif ve Planlama</span>
+                        </h3>
+                        <p class="timeline-duration">
+                            <span class="en-text">Week 1-2</span>
+                            <span class="tr-text hidden">1-2. Hafta</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="en-text">Current system assessment and integration planning</span>
+                                <span class="tr-text hidden">Mevcut sistem değerlendirmesi ve entegrasyon planlaması</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Role mapping and permission structure design</span>
+                                <span class="tr-text hidden">Rol haritalama ve izin yapısı tasarımı</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Turkish voice training data collection and customization</span>
+                                <span class="tr-text hidden">Türkçe ses eğitim verisi toplama ve özelleştirme</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="en-text">Data Migration & Setup</span>
+                            <span class="tr-text hidden">Veri Taşıma ve Kurulum</span>
+                        </h3>
+                        <p class="timeline-duration">
+                            <span class="en-text">Week 3-4</span>
+                            <span class="tr-text hidden">3-4. Hafta</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="en-text">Historical data import and cleaning</span>
+                                <span class="tr-text hidden">Geçmiş veri içe aktarma ve temizleme</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Satellite data calibration for your geographic area</span>
+                                <span class="tr-text hidden">Coğrafi alanınız için uydu verisi kalibrasyonu</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Fleet device installation and GPS tracker configuration</span>
+                                <span class="tr-text hidden">Filo cihazı kurulumu ve GPS takip cihazı konfigürasyonu</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="en-text">Pilot Launch</span>
+                            <span class="tr-text hidden">Pilot Başlatma</span>
+                        </h3>
+                        <p class="timeline-duration">
+                            <span class="en-text">Week 5-6</span>
+                            <span class="tr-text hidden">5-6. Hafta</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="en-text">Limited rollout to one district or department</span>
+                                <span class="tr-text hidden">Bir ilçe veya departmana sınırlı kullanıma sunma</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Staff training workshops and certification programs</span>
+                                <span class="tr-text hidden">Personel eğitim atölyeleri ve sertifika programları</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Real-world testing and performance optimization</span>
+                                <span class="tr-text hidden">Gerçek dünya testi ve performans optimizasyonu</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>4</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>
+                            <span class="en-text">Full Scale-Out</span>
+                            <span class="tr-text hidden">Tam Ölçek Genişletme</span>
+                        </h3>
+                        <p class="timeline-duration">
+                            <span class="en-text">Week 7-8</span>
+                            <span class="tr-text hidden">7-8. Hafta</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="en-text">Municipality-wide deployment and go-live</span>
+                                <span class="tr-text hidden">Belediye çapında dağıtım ve canlıya geçiş</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Advanced feature activation and customization</span>
+                                <span class="tr-text hidden">Gelişmiş özellik etkinleştirme ve özelleştirme</span>
+                            </li>
+                            <li>
+                                <span class="en-text">Performance monitoring and continuous optimization</span>
+                                <span class="tr-text hidden">Performans izleme ve sürekli optimizasyon</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="implementation-cta">
+                <p>
+                    <span class="en-text">Dedicated launch team in your city within 30 days</span>
+                    <span class="tr-text hidden">30 gün içinde şehrinizde özel başlatma ekibi</span>
+                </p>
+                <button class="cta-primary">
+                    <span class="en-text">Start Your Implementation Journey</span>
+                    <span class="tr-text hidden">Uygulama Yolculuğunuzu Başlatın</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Showcase -->
+    <section class="platform-showcase">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en-text">See GBSoft in Action</span>
+                <span class="tr-text hidden">GBSoft'u Aksiyonda Görün</span>
+            </h2>
             
-            <div class="functions-grid">
-                <article class="function-card">
-                    <div class="function-icon">
-                        <span>🎯</span>
-                    </div>
-                    <div class="function-content">
-                        <h3>Operasyon Planlama</h3>
-                        <p>Yapay zeka algoritmalarıyla vardiya, rota ve kaynak planlamasını otomatik olarak oluşturur. Zaman, yakıt ve insan gücü verimliliği artırılır.</p>
-                    </div>
-                </article>
-                
-                <article class="function-card">
-                    <div class="function-icon">
-                        <span>📡</span>
-                    </div>
-                    <div class="function-content">
-                        <h3>Gerçek Zamanlı Takip</h3>
-                        <p>Araçların ve personelin konumunu GPS üzerinden canlı olarak izler. Harita tabanlı arayüz sayesinde operasyonun anlık durumu görüntülenir.</p>
-                    </div>
-                </article>
-                
-                <article class="function-card">
-                    <div class="function-icon">
-                        <span>🛰️</span>
-                    </div>
-                    <div class="function-content">
-                        <h3>Uydu Verisi Entegrasyonu</h3>
-                        <p>Sentinel-2 uydusundan alınan görüntülerle çevresel analiz yapılır. Yeşil alan takibi, kentsel gelişim izleme ve arazi kullanımı analizleri.</p>
-                    </div>
-                </article>
-                
-                <article class="function-card">
-                    <div class="function-icon">
-                        <span>📊</span>
-                    </div>
-                    <div class="function-content">
-                        <h3>Veri Analizi ve Raporlama</h3>
-                        <p>Tüm operasyon verilerini kaydeder, analiz eder ve görsel dashboard'larda sunar. Performans göstergelerini ve trendleri kolayca izleme.</p>
-                    </div>
-                </article>
-                
-                <article class="function-card">
-                    <div class="function-icon">
-                        <span>🔧</span>
-                    </div>
-                    <div class="function-content">
-                        <h3>Modüler Mimari</h3>
-                        <p>Her kurum için ayrı sunucu ve veritabanı üzerinde çalışır. Yüksek güvenlik, veri gizliliği ve performans sağlar.</p>
-                    </div>
-                </article>
-                
-                <article class="function-card">
-                    <div class="function-icon">
-                        <span>🧠</span>
-                    </div>
-                    <div class="function-content">
-                        <h3>Yapay Zeka Destekli Karar Motoru</h3>
-                        <p>Geçmiş operasyonlardan öğrenir, geleceğe yönelik tahminler ve öneriler üretir. Karar alma süreçlerini hızlandırır.</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Section -->
-    <section id="technology" class="technology">
-        <div class="container">
-            <div class="tech-content">
-                <div class="tech-text">
-                    <h2>Sürdürülebilirlik ve Verimlilik</h2>
-                    <p>GBSoft, şehirlerin, tesislerin ve kurumların dijital dönüşümünü hızlandıran, yapay zeka ve veri analitiğiyle çalışan akıllı yönetim sistemidir.</p>
-                    
-                    <div class="tech-features">
-                        <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Enerji, zaman ve kaynak kayıplarını azaltır</span>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Operasyonel maliyetleri düşürür</span>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Karbon ayak izini izleme ve azaltma</span>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Operasyonel süreçleri şeffaf ve ölçülebilir hale getirir</span>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <div class="showcase-image-container">
+                        <img src="filokomutamerkezi3.png" alt="Fleet Analytics Dashboard" class="showcase-image" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3>
+                                <span class="en-text">AI Fleet Analytics</span>
+                                <span class="tr-text hidden">AI Filo Analitiği</span>
+                            </h3>
+                            <p>
+                                <span class="en-text">Advanced AI insights for fleet performance optimization</span>
+                                <span class="tr-text hidden">Filo performans optimizasyonu için gelişmiş AI içgörüleri</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="tech-visual">
-                    <div class="tech-stack">
-                        <div class="stack-item">Yapay Zeka</div>
-                        <div class="stack-item">Bulut</div>
-                        <div class="stack-item">Güvenlik</div>
-                        <div class="stack-item">Analitik</div>
+                <div class="showcase-item">
+                    <div class="showcase-image-container">
+                        <img src="PERSONELMANAGEMENT.png" alt="Personnel Management System" class="showcase-image" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3>
+                                <span class="en-text">Personnel Management</span>
+                                <span class="tr-text hidden">Personel Yönetimi</span>
+                            </h3>
+                            <p>
+                                <span class="en-text">Complete staff management with performance tracking</span>
+                                <span class="tr-text hidden">Performans takibi ile eksiksiz personel yönetimi</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="showcase-item">
+                    <div class="showcase-image-container">
+                        <img src="login.png" alt="Secure Login Interface" class="showcase-image" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3>
+                                <span class="en-text">Secure Access Portal</span>
+                                <span class="tr-text hidden">Güvenli Erişim Portalı</span>
+                            </h3>
+                            <p>
+                                <span class="en-text">Enterprise-grade security with role-based access</span>
+                                <span class="tr-text hidden">Rol tabanlı erişim ile kurumsal düzeyde güvenlik</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
         <div class="container">
-            <div class="about-content">
-                <div class="about-logo-section">
-                    <img src="logo.jpg" alt="GBSoft" class="about-logo">
-                    <h2>GBSoft Hakkında</h2>
-                </div>
-                <div class="about-text">
-                    <p>GBSoft, kurumların ve belediyelerin operasyonlarını yapay zeka destekli olarak planlamasını, izlemesini ve optimize etmesini sağlayan entegre bir yönetim platformudur.</p>
-                    <p>Sistem; insan, araç ve çevresel verileri tek bir merkezde toplar, analiz eder ve yöneticilere karar desteği sunar. Kurumların operasyonel süreçlerini şeffaf, ölçülebilir ve sürdürülebilir hale getirir.</p>
-                </div>
-                
-                <div class="about-features">
-                    <div class="about-feature">
-                        <div class="feature-icon">🎯</div>
-                        <h4>Dijital Dönüşüm</h4>
-                        <p>Şehirler ve kurumlar için hızlı dijital dönüşüm</p>
+            <h2 class="section-title">
+                <span class="tr-text">Her Belediye için Özelleştirilmiş Çözümler</span>
+                <span class="en-text hidden">Customized Solutions for Every Municipality</span>
+            </h2>
+            
+            <div class="solutions-intro">
+                <p class="intro-text">
+                    <span class="tr-text">GBSoft, her belediyenin kendine özgü ihtiyaçları için tasarlanmış esnek çözümler sunar. Küçük ilçe belediyelerinden büyük şehir yönetimlerine kadar, her ölçekte operasyonel mükemmellik sağlıyoruz.</span>
+                    <span class="en-text hidden">GBSoft offers flexible solutions designed for each municipality's unique needs. From small district municipalities to large city administrations, we provide operational excellence at every scale.</span>
+                </p>
+            </div>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-seedling"></i>
                     </div>
-                    <div class="about-feature">
-                        <div class="feature-icon">🔬</div>
-                        <h4>Veri Analitiği</h4>
-                        <p>Yapay zeka ve veri analizi ile akıllı çözümler</p>
+                    <h3>
+                        <span class="tr-text">Başlangıç Çözümü</span>
+                        <span class="en-text hidden">Starter Solution</span>
+                    </h3>
+                    <p class="solution-description">
+                        <span class="tr-text">Küçük ve orta ölçekli belediyeler için ideal başlangıç paketi</span>
+                        <span class="en-text hidden">Ideal starter package for small to medium-sized municipalities</span>
+                    </p>
+                    <ul class="solution-features">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Temel filo takibi</span>
+                            <span class="en-text hidden">Basic fleet tracking</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Personel yönetimi</span>
+                            <span class="en-text hidden">Personnel management</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Raporlama araçları</span>
+                            <span class="en-text hidden">Reporting tools</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Teknik destek</span>
+                            <span class="en-text hidden">Technical support</span>
+                        </li>
+                    </ul>
+                    <button class="solution-cta">
+                        <span class="tr-text">Detayları Öğren</span>
+                        <span class="en-text hidden">Learn Details</span>
+                    </button>
+                </div>
+
+                <div class="solution-card featured">
+                    <div class="solution-badge">
+                        <span class="tr-text">En Popüler</span>
+                        <span class="en-text hidden">Most Popular</span>
                     </div>
-                    <div class="about-feature">
-                        <div class="feature-icon">⚡</div>
-                        <h4>Hızlı Karar</h4>
-                        <p>Karar alma süreçlerini hızlandırır ve hatalar azalır</p>
+                    <div class="solution-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>
+                        <span class="tr-text">Kapsamlı Şehir Çözümü</span>
+                        <span class="en-text hidden">Comprehensive City Solution</span>
+                    </h3>
+                    <p class="solution-description">
+                        <span class="tr-text">Büyük şehir belediyeleri için tam entegre platform</span>
+                        <span class="en-text hidden">Fully integrated platform for large city municipalities</span>
+                    </p>
+                    <ul class="solution-features">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">AI destekli vardiya planlama</span>
+                            <span class="en-text hidden">AI-powered shift planning</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Gelişmiş filo analizi</span>
+                            <span class="en-text hidden">Advanced fleet analytics</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Türkçe sesli komut merkezi</span>
+                            <span class="en-text hidden">Turkish voice command center</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Çevresel analitik dashboard</span>
+                            <span class="en-text hidden">Environmental analytics dashboard</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">API entegrasyonu</span>
+                            <span class="en-text hidden">API integration</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Öncelikli destek</span>
+                            <span class="en-text hidden">Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="solution-cta">
+                        <span class="tr-text">Hemen Başla</span>
+                        <span class="en-text hidden">Get Started</span>
+                    </button>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>
+                        <span class="tr-text">Kurumsal Özel Çözüm</span>
+                        <span class="en-text hidden">Enterprise Custom Solution</span>
+                    </h3>
+                    <p class="solution-description">
+                        <span class="tr-text">Büyükşehir belediyeleri ve özel gereksinimler için</span>
+                        <span class="en-text hidden">For metropolitan municipalities and special requirements</span>
+                    </p>
+                    <ul class="solution-features">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Tamamen özelleştirilebilir</span>
+                            <span class="en-text hidden">Fully customizable</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Çoklu lokasyon desteği</span>
+                            <span class="en-text hidden">Multi-location support</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Özel özellik geliştirme</span>
+                            <span class="en-text hidden">Custom feature development</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Özel müşteri yöneticisi</span>
+                            <span class="en-text hidden">Dedicated customer manager</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">SLA garantisi</span>
+                            <span class="en-text hidden">SLA guarantee</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span class="tr-text">Beyaz etiket seçeneği</span>
+                            <span class="en-text hidden">White-label option</span>
+                        </li>
+                    </ul>
+                    <button class="solution-cta">
+                        <span class="tr-text">İletişime Geç</span>
+                        <span class="en-text hidden">Contact Us</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pricing-footer">
+                <p>
+                    <span class="en-text">All plans include data residency in Turkey, GDPR compliance, and 99.9% uptime guarantee</span>
+                    <span class="tr-text hidden">Tüm planlar Türkiye'de veri ikameti, GDPR uyumluluğu ve %99,9 çalışma süresi garantisi içerir</span>
+                </p>
+                <button class="cta-secondary large">
+                    <span class="en-text">Schedule a Live Control-Room Walkthrough</span>
+                    <span class="tr-text hidden">Canlı Kontrol Odası Turunu Planlayın</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="en-text">Frequently Asked Questions</span>
+                <span class="tr-text hidden">Sıkça Sorulan Sorular</span>
+            </h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">
+                        <span class="en-text">Where is our data stored and how is it protected?</span>
+                        <span class="tr-text hidden">Verilerimiz nerede saklanır ve nasıl korunur?</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="en-text">All data is stored within Turkey in ISO 27001 certified data centers with AES-256 encryption. We comply with both GDPR and Turkish KVKK regulations, ensuring complete data sovereignty for Turkish municipalities.</span>
+                            <span class="tr-text hidden">Tüm veriler Türkiye içinde ISO 27001 sertifikalı veri merkezlerinde AES-256 şifrelemesi ile saklanır. Hem GDPR hem de Türk KVKK düzenlemelerine uyarak, Türk belediyeler için tam veri egemenliği sağlarız.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">
+                        <span class="en-text">What hardware requirements are needed for deployment?</span>
+                        <span class="tr-text hidden">Dağıtım için hangi donanım gereksinimleri gereklidir?</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="en-text">GBSoft Smart Operations is cloud-native and requires minimal on-premise hardware. For fleet tracking, we provide GPS devices and telematics units. The platform runs on standard web browsers and mobile devices your teams already use.</span>
+                            <span class="tr-text hidden">GBSoft Akıllı Operasyonlar bulut-yerel olup minimal yerinde donanım gerektirir. Filo takibi için GPS cihazları ve telematik üniteler sağlarız. Platform, ekiplerinizin zaten kullandığı standart web tarayıcıları ve mobil cihazlarda çalışır.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">
+                        <span class="en-text">Are there API limits for integration with existing systems?</span>
+                        <span class="tr-text hidden">Mevcut sistemlerle entegrasyon için API limitleri var mı?</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="en-text">Our enterprise plans include unlimited API calls. Standard plans have generous limits suitable for most municipal operations. We provide comprehensive API documentation and integration support to ensure seamless connectivity with your existing systems.</span>
+                            <span class="tr-text hidden">Kurumsal planlarımız sınırsız API çağrıları içerir. Standart planlar çoğu belediye operasyonu için uygun cömert limitlere sahiptir. Mevcut sistemlerinizle sorunsuz bağlantı sağlamak için kapsamlı API dokümantasyonu ve entegrasyon desteği sağlarız.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">
+                        <span class="en-text">What language support is available beyond Turkish and English?</span>
+                        <span class="tr-text hidden">Türkçe ve İngilizce dışında hangi dil desteği mevcuttur?</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="en-text">The platform is fully bilingual (Turkish/English) with Turkish voice command recognition optimized for regional dialects. Additional languages can be added as custom development for enterprise customers with significant multi-language requirements.</span>
+                            <span class="tr-text hidden">Platform tamamen iki dilli (Türkçe/İngilizce) olup bölgesel lehçeler için optimize edilmiş Türkçe sesli komut tanıma özelliğine sahiptir. Önemli çok dil gereksinimlerine sahip kurumsal müşteriler için ek diller özel geliştirme olarak eklenebilir.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">
+                        <span class="en-text">How comprehensive is the training program for our staff?</span>
+                        <span class="tr-text hidden">Personelimiz için eğitim programı ne kadar kapsamlıdır?</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="en-text">We provide comprehensive on-site training workshops, video tutorials, and certification programs. Our 7/24 technical support includes training assistance, and we offer ongoing optimization sessions to ensure your team maximizes platform benefits.</span>
+                            <span class="tr-text hidden">Kapsamlı yerinde eğitim atölyeleri, video eğitimleri ve sertifika programları sağlarız. 7/24 teknik desteğimiz eğitim yardımı içerir ve ekibinizin platform faydalarını maksimize etmesini sağlamak için sürekli optimizasyon oturumları sunarız.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">
+                        <span class="en-text">Can the system handle multiple municipalities or districts simultaneously?</span>
+                        <span class="tr-text hidden">Sistem aynı anda birden fazla belediye veya ilçeyi yönetebilir mi?</span>
+                    </h3>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="en-text">Yes, GBSoft Smart Operations supports multi-tenant architecture for municipal groups, metropolitan areas, or service sharing agreements. Each municipality maintains data isolation while enabling cross-jurisdiction coordination when needed.</span>
+                            <span class="tr-text hidden">Evet, GBSoft Akıllı Operasyonlar belediye grupları, büyükşehir alanları veya hizmet paylaşım anlaşmaları için çok kiracılı mimariyi destekler. Her belediye veri izolasyonunu korurken, gerektiğinde yargı alanları arası koordinasyonu sağlar.</span>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Final CTA -->
+    <section class="final-cta">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Başlayın</h2>
-                    <p>İşletmenizi yapay zeka ile dönüştürmeye hazır mısınız? Kişiselleştirilmiş danışmanlık için kurumsal ekibimizle iletişime geçin.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span>enterprise@gbsoft.tech</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <span>+90 536 840 92 36</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">🏢</span>
-                            <span>Atateknokent, Erzurum</span>
-                        </div>
-                    </div>
+            <div class="cta-content">
+                <h2>
+                    <span class="en-text">Ready to Transform Your Municipal Operations?</span>
+                    <span class="tr-text hidden">Belediye Operasyonlarınızı Dönüştürmeye Hazır mısınız?</span>
+                </h2>
+                <p>
+                    <span class="en-text">Join forward-thinking municipalities already using AI-powered operations. Schedule a personalized demo and see GBSoft Smart Operations in action for your specific needs.</span>
+                    <span class="tr-text hidden">AI destekli operasyonları zaten kullanan ilerici belediyelere katılın. Kişiselleştirilmiş bir demo planlayın ve GBSoft Akıllı Operasyonları özel ihtiyaçlarınız için aksiyonda görün.</span>
+                </p>
+                <div class="final-cta-buttons">
+                    <button class="cta-primary large">
+                        <span class="en-text">Book a 30-Minute Command-Center Tour</span>
+                        <span class="tr-text hidden">30 Dakikalık Komut Merkezi Turunu Rezerve Edin</span>
+                    </button>
+                    <button class="cta-secondary large">
+                        <span class="en-text">Download Municipality Brief (PDF)</span>
+                        <span class="tr-text hidden">Belediye Özetini İndirin (PDF)</span>
+                    </button>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Ad Soyad" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="E-posta Adresi" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="company" placeholder="Şirket" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Mesaj" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Mesaj Gönder</button>
-                </form>
+                <div class="final-cta-guarantee">
+                    <p>
+                        <span class="en-text">✓ No commitment required ✓ Dedicated launch team within 30 days ✓ 7/24 support guarantee</span>
+                        <span class="tr-text hidden">✓ Taahhüt gerekmez ✓ 30 gün içinde özel başlatma ekibi ✓ 7/24 destek garantisi</span>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -292,24 +1152,128 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-            <div class="footer-brand">
-                <img src="logo.jpg" alt="GBSoft" class="footer-logo">
-                <span class="footer-text">GBSoft</span>
-            </div>
-                
-                <div class="footer-links">
-                    <a href="#privacy">Gizlilik</a>
-                    <a href="#terms">Şartlar</a>
-                    <a href="#security">Güvenlik</a>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="logo.jpg" alt="GBSoft" class="footer-logo">
+                        <span class="footer-brand-text">GBSoft Smart Operations</span>
+                    </div>
+                    <p>
+                        <span class="tr-text">AI destekli zeka, gerçek zamanlı görünürlük ve uydu destekli çevresel içgörülerle belediye operasyonlarını dönüştürme.</span>
+                        <span class="en-text hidden">Transforming municipal operations with AI-powered intelligence, real-time visibility, and satellite-backed environmental insights.</span>
+                    </p>
+                    <div class="footer-contact">
+                        <p>
+                            <span class="tr-text">📍 Türkiye | 🌍 Avrupa'ya genişliyor</span>
+                            <span class="en-text hidden">📍 Turkey | 🌍 Expanding across Europe</span>
+                        </p>
+                        <p>
+                            <span class="tr-text">📧 hello@gbsoft.com</span>
+                            <span class="en-text hidden">📧 hello@gbsoft.com</span>
+                        </p>
+                        <p>
+                            <span class="tr-text">📞 0 536 840 9236 (Saltuk Göğebakan)</span>
+                            <span class="en-text hidden">📞 0 536 840 9236 (Saltuk Göğebakan)</span>
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="footer-copy">
-                    <p>&copy; 2025 GBSoft. Tüm hakları saklıdır.</p>
+
+                <div class="footer-section">
+                    <h4>
+                        <span class="tr-text">Platform</span>
+                        <span class="en-text hidden">Platform</span>
+                    </h4>
+                    <ul>
+                        <li><a href="#features">
+                            <span class="en-text">AI Shift Planning</span>
+                            <span class="tr-text hidden">AI Vardiya Planlama</span>
+                        </a></li>
+                        <li><a href="#features">
+                            <span class="en-text">Fleet Management</span>
+                            <span class="tr-text hidden">Filo Yönetimi</span>
+                        </a></li>
+                        <li><a href="#features">
+                            <span class="en-text">Satellite Analytics</span>
+                            <span class="tr-text hidden">Uydu Analitiği</span>
+                        </a></li>
+                        <li><a href="#features">
+                            <span class="en-text">Voice Commands</span>
+                            <span class="tr-text hidden">Sesli Komutlar</span>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>
+                        <span class="en-text">Resources</span>
+                        <span class="tr-text hidden">Kaynaklar</span>
+                    </h4>
+                    <ul>
+                        <li><a href="/documentation">
+                            <span class="en-text">API Documentation</span>
+                            <span class="tr-text hidden">API Dokümantasyonu</span>
+                        </a></li>
+                        <li><a href="/case-studies">
+                            <span class="en-text">Case Studies</span>
+                            <span class="tr-text hidden">Örnek Çalışmalar</span>
+                        </a></li>
+                        <li><a href="/support">
+                            <span class="en-text">Support Portal</span>
+                            <span class="tr-text hidden">Destek Portalı</span>
+                        </a></li>
+                        <li><a href="/training">
+                            <span class="en-text">Training Center</span>
+                            <span class="tr-text hidden">Eğitim Merkezi</span>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>
+                        <span class="en-text">Company</span>
+                        <span class="tr-text hidden">Şirket</span>
+                    </h4>
+                    <ul>
+                        <li><a href="/about">
+                            <span class="en-text">About GBSoft</span>
+                            <span class="tr-text hidden">GBSoft Hakkında</span>
+                        </a></li>
+                        <li><a href="/careers">
+                            <span class="en-text">Careers</span>
+                            <span class="tr-text hidden">Kariyer</span>
+                        </a></li>
+                        <li><a href="/news">
+                            <span class="en-text">News & Updates</span>
+                            <span class="tr-text hidden">Haberler ve Güncellemeler</span>
+                        </a></li>
+                        <li><a href="/contact">
+                            <span class="en-text">Contact</span>
+                            <span class="tr-text hidden">İletişim</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>
+                        <span class="en-text">© 2024 GBSoft. All rights reserved. | Privacy Policy | Terms of Service | KVKK Policy</span>
+                        <span class="tr-text hidden">© 2024 GBSoft. Tüm hakları saklıdır. | Gizlilik Politikası | Hizmet Şartları | KVKK Politikası</span>
+                    </p>
+                </div>
+                <div class="footer-certifications">
+                    <span>🔒 ISO 27001 | 🛡️ GDPR | 🇹🇷 KVKK Compliant</span>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta" id="floatingCta">
+        <button class="floating-cta-button">
+            <span class="en-text">Talk to an Expert</span>
+            <span class="tr-text hidden">Uzman ile Konuş</span>
+        </button>
+    </div>
 
     <script src="main.js"></script>
 </body>
