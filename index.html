@@ -741,16 +741,23 @@
                         </div>
                     </div>
                     <div class="cta-buttons">
-                        <button class="btn btn-gradient btn-large">
+                        <button class="btn btn-gradient btn-large" id="ctaDemoBtn">
                             <span>Demo Planla</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                        <button class="btn btn-white btn-large">
+                        <a href="tel:+905368409236" class="btn btn-white btn-large">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
                             <span>+90 536 840 92 36</span>
-                        </button>
+                        </a>
                         <a class="btn btn-secondary btn-large" href="mailto:saltukgogebakan@gmail.com">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
                             <span>saltukgogebakan@gmail.com</span>
                         </a>
                     </div>
@@ -868,7 +875,104 @@
         </svg>
     </button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- Contact Form Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal" aria-label="Kapat">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Ücretsiz Demo Talep Edin</h2>
+                    <p>Formu doldurun, ekibimiz en kısa sürede sizinle iletişime geçsin.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form" action="https://formsubmit.co/saltukgogebakan@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Yeni Demo Talebi - GBSoft">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://gbsoftt.com#success">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ad Soyad *</label>
+                            <input type="text" id="name" name="name" required placeholder="Adınız ve Soyadınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Kurum/Şirket *</label>
+                            <input type="text" id="company" name="company" required placeholder="Kurum veya Şirket Adı">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-posta *</label>
+                            <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+90 5XX XXX XX XX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="module">İlgilendiğiniz Modül</label>
+                        <select id="module" name="module">
+                            <option value="">Seçiniz (Opsiyonel)</option>
+                            <option value="AI Vardiya Planlama">AI Vardiya Planlama</option>
+                            <option value="Araç Takip & Telemetri">Araç Takip & Telemetri</option>
+                            <option value="DPO & Beyaz Masa">DPO & Beyaz Masa</option>
+                            <option value="Sesli Mesajlaşma">Sesli Mesajlaşma Sistemi</option>
+                            <option value="Tüm Platform">Tüm Platform</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" name="message" rows="4" placeholder="İhtiyaçlarınız hakkında bize bilgi verin (Opsiyonel)"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="consent" required>
+                            <span>İletişim bilgilerimin iletişim amacıyla kullanılmasını kabul ediyorum. *</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-gradient btn-large">
+                            <span>Gönder</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-large" id="cancelForm">
+                            <span>İptal</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="form-success" id="formSuccess" style="display: none;">
+                    <div class="success-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="#10b981"/>
+                            <path d="M20 32L28 40L44 24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Teşekkür Ederiz!</h3>
+                    <p>Demo talebiniz alındı. Ekibimiz en kısa sürede sizinle iletişime geçecek.</p>
+                    <button class="btn btn-gradient" id="closeSuccess">
+                        <span>Kapat</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

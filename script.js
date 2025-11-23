@@ -599,6 +599,120 @@ document.addEventListener('DOMContentLoaded', function() {
             konamiIndex = 0;
         }
     });
+
+    // ============================================
+    // Contact Form Modal Functionality
+    // ============================================
+    const modal = document.getElementById('contactModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const cancelFormBtn = document.getElementById('cancelForm');
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const closeSuccessBtn = document.getElementById('closeSuccess');
+
+    // Function to open modal
+    function openContactModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to close modal
+    function closeContactModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Reset form after a delay
+        setTimeout(() => {
+            contactForm.reset();
+            contactForm.style.display = 'flex';
+            formSuccess.style.display = 'none';
+        }, 300);
+    }
+
+    // Connect all "Demo Request" buttons to open modal
+    const demoButtons = document.querySelectorAll('.btn-gradient, .btn[href="#iletisim"]');
+    demoButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const buttonText = button.textContent.toLowerCase();
+            if (buttonText.includes('demo') || buttonText.includes('planla') || buttonText.includes('talep')) {
+                e.preventDefault();
+                openContactModal();
+            }
+        });
+    });
+
+    // Close modal on X button click
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeContactModal);
+    }
+
+    // Close modal on cancel button click
+    if (cancelFormBtn) {
+        cancelFormBtn.addEventListener('click', closeContactModal);
+    }
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeContactModal();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeContactModal();
+        }
+    });
+
+    // Handle form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            // Let the form submit naturally to FormSubmit.co
+            // But show success message after submission
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+
+            // Submit via fetch to handle it programmatically
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Fallback: submit normally if fetch fails
+                contactForm.submit();
+            });
+        });
+    }
+
+    // Close success message
+    if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener('click', closeContactModal);
+    }
+
+    // Check for success hash in URL (after FormSubmit redirect)
+    if (window.location.hash === '#success') {
+        openContactModal();
+        contactForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+
+        // Remove hash from URL
+        history.replaceState(null, null, ' ');
+    }
 });
 
 // ============================================
